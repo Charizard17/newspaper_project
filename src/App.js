@@ -1,26 +1,47 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Navbar from "./components/Navbar/Navbar";
+import { Route, Switch } from "react-router";
+import Finance from "./components/Finance/Finance";
+import Home from "./components/Home/Home";
+import Covid19 from "./components/Covid19/Covid19";
+import Political from "./components/Political/Political";
+import Sport from "./components/Sport/Sport";
+import Art from "./components/Art/Art";
+import Education from "./components/Education/Education";
+import TurningReact from './components/ReactComponent/TurningReact';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Navbar />
+      <Switch>
+      <Route path="/turningreact">
+          <TurningReact />
+        </Route>
+        <Route exact path="/">
+          <Home />
+        </Route>
+        <Route exact path="/political">
+          <Political />
+        </Route>
+        <Route exact path="/sport">
+          <Sport />
+        </Route>
+        <Route exact path="/art">
+          <Art />
+        </Route>
+        <Route exact path="/education">
+          <Education />
+        </Route>
+        <Route exact path="/finance">
+          <Finance />
+        </Route>
+        <Route exact path="/covid19">
+          <Covid19 />
+        </Route>
+      </Switch>
     </div>
   );
-}
+};
 
 export default App;
