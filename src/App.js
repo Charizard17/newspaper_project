@@ -8,14 +8,14 @@ import Political from "./components/Political/Political";
 import Sport from "./components/Sport/Sport";
 import Art from "./components/Art/Art";
 import Education from "./components/Education/Education";
-import TurningReact from './components/ReactComponent/TurningReact';
+import TurningReact from "./components/ReactComponent/TurningReact";
 
 const App = () => {
   return (
     <div>
       <Navbar />
       <Switch>
-      <Route path="/turningreact">
+        <Route path="/turningreact">
           <TurningReact />
         </Route>
         <Route exact path="/">
