@@ -14,15 +14,15 @@ export default class Navbar extends Component {
             className="navbar-toggler"
             type="button"
             data-toggle="collapse"
-            data-target="#navbarNav"
-            aria-controls="navbarNav"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
             <span className="navbar-toggler-icon"></span>
           </button>
-          <div className="collapse navbar-collapse" id="navbarNav">
-            <ul className="navbar-nav">
+          <div className="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul className="navbar-nav ml-auto">
               <li className="nav-item active">
                 <Link className="nav-link" to="/">
                   Home <span className="sr-only">(current)</span>
@@ -50,12 +50,12 @@ export default class Navbar extends Component {
               </li>
               <li className="nav-item active">
                 <Link className="nav-link" to="/science">
-                  Science <span className="sr-only">(current)</span>
+                  Science
                 </Link>
               </li>
               <li className="nav-item active">
                 <Link className="nav-link" to="/technology">
-                  Technology <span className="sr-only">(current)</span>
+                  Technology
                 </Link>
               </li>
               <li className="nav-item active">
