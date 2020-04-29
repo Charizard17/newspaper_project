@@ -1,45 +1,51 @@
 import React from "react";
 import Navbar from "./components/Navbar/Navbar";
 import { Route, Switch } from "react-router";
-import Finance from "./components/Finance/Finance";
+import Science from "./components/Science/Science";
+import Technology from "./components/Technology/Technology";
 import Home from "./components/Home/Home";
 import Covid19 from "./components/Covid19/Covid19";
-import Political from "./components/Political/Political";
-import Sport from "./components/Sport/Sport";
-import Art from "./components/Art/Art";
-import Education from "./components/Education/Education";
+import Business from "./components/Business/Business";
+import Sports from "./components/Sports/Sports";
+import Health from "./components/Health/Health";
+import Entertainment from "./components/Entertainment/Entertainment";
 import TurningReact from "./components/ReactComponent/TurningReact";
 
 const App = () => {
   return (
-    <div>
+    <div className="bg-secondary">
       <Navbar />
-      <Switch>
-        <Route path="/turningreact">
-          <TurningReact />
-        </Route>
-        <Route exact path="/">
-          <Home />
-        </Route>
-        <Route exact path="/political">
-          <Political />
-        </Route>
-        <Route exact path="/sport">
-          <Sport />
-        </Route>
-        <Route exact path="/art">
-          <Art />
-        </Route>
-        <Route exact path="/education">
-          <Education />
-        </Route>
-        <Route exact path="/finance">
-          <Finance />
-        </Route>
-        <Route exact path="/covid19">
-          <Covid19 />
-        </Route>
-      </Switch>
+      <div className="pt-2">
+        <Switch>
+          <Route path="/turningreact">
+            <TurningReact />
+          </Route>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route exact path="/business">
+            <Business />
+          </Route>
+          <Route exact path="/sports">
+            <Sports />
+          </Route>
+          <Route exact path="/health">
+            <Health />
+          </Route>
+          <Route exact path="/entertainment">
+            <Entertainment />
+          </Route>
+          <Route exact path="/science">
+            <Science />
+          </Route>
+          <Route exact path="/technology">
+            <Technology />
+          </Route>
+          <Route exact path="/covid19">
+            <Covid19 />
+          </Route>
+        </Switch>
+      </div>
     </div>
   );
 };

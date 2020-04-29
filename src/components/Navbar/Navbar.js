@@ -6,12 +6,12 @@ export default class Navbar extends Component {
   render() {
     return (
       <div>
-        <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
-          <Link class="navbar-brand" to="/turningreact">
+        <nav className="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
+          <Link className="navbar-brand" to="/turningreact">
             Turning React
           </Link>
           <button
-            class="navbar-toggler"
+            className="navbar-toggler"
             type="button"
             data-toggle="collapse"
             data-target="#navbarNav"
@@ -19,43 +19,48 @@ export default class Navbar extends Component {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span class="navbar-toggler-icon"></span>
+            <span className="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item active">
-                <Link class="nav-link" to="/">
-                  Home <span class="sr-only">(current)</span>
+          <div className="collapse navbar-collapse" id="navbarNav">
+            <ul className="navbar-nav">
+              <li className="nav-item active">
+                <Link className="nav-link" to="/">
+                  Home <span className="sr-only">(current)</span>
                 </Link>
               </li>
-              <li class="nav-item active">
-                <Link class="nav-link" to="/political">
-                  Political
+              <li className="nav-item active">
+                <Link className="nav-link" to="/business">
+                  Business
                 </Link>
               </li>
-              <li class="nav-item active">
-                <Link class="nav-link" to="/sport">
-                  Sport
+              <li className="nav-item active">
+                <Link className="nav-link" to="/sports">
+                  Sports
                 </Link>
               </li>
-              <li class="nav-item active">
-                <Link class="nav-link" to="/art">
-                  Art
+              <li className="nav-item active">
+                <Link className="nav-link" to="/health">
+                  Health
                 </Link>
               </li>
-              <li class="nav-item active">
-                <Link class="nav-link" to="/education">
-                  Education
+              <li className="nav-item active">
+                <Link className="nav-link" to="/entertainment">
+                  Entertainment
                 </Link>
               </li>
-              <li class="nav-item active">
-                <Link class="nav-link" to="/finance">
-                  Finance <span class="sr-only">(current)</span>
+              <li className="nav-item active">
+                <Link className="nav-link" to="/science">
+                  Science <span className="sr-only">(current)</span>
                 </Link>
               </li>
-              <li class="nav-item active">
-                <Link class="nav-link" to="/covid19">
-                  COVID-19<span class="badge badge-secondary">New</span>
+              <li className="nav-item active">
+                <Link className="nav-link" to="/technology">
+                  Technology <span className="sr-only">(current)</span>
+                </Link>
+              </li>
+              <li className="nav-item active">
+                <Link className="nav-link" to="/covid19">
+                  COVID-19<span className="badge badge-secondary">New</span>
                 </Link>
               </li>
             </ul>
