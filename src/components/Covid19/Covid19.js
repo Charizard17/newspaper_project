@@ -15,9 +15,9 @@ class Covid19 extends Component {
             width="1420"
             height="887"
             src="https://www.youtube.com/embed/cRy5_KpPxyM"
-            frameborder="0"
+            frameBorder="0"
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
+            allowFullScreen
           ></iframe>
         </div>
       </div>
