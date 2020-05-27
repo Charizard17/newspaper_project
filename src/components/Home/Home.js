@@ -1,14 +1,41 @@
 import React, { Component } from "react";
 
 class Home extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      images: [],
+    };
+    this.textInput = React.createRef();
+  }
+
+  componentDidMount() {
+    let images = this.getRandomImages();
+    this.setState({ images });
+  }
+
+  getRandomImages() {
+    let image = [];
+    for (let i = 0; i < 15; i++) {
+      image.push({
+        imageSrc: "https://source.unsplash.com/random"
+      });
+    }
+    return image;
+  }
   render() {
     return (
       <div className="pt-5">
         <div className="container text-center">
+        {this.state.images.map((item, index) => {
+          return (
+            <div key={index} className="col"><img className="img-thumbnail" style={{ width: "32%", height: "32%" }} src={item.imageSrc} alt=""/></div>
+          );
+        })}
           <div className="row pt-5">
-            <div className="col"><img className="img-thumbnail" src="https://images.pexels.com/photos/3268257/pexels-photo-3268257.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt=""/></div>
-            <div className="col"><img className="img-thumbnail" src="https://images.pexels.com/photos/2569471/pexels-photo-2569471.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt=""/></div>
-            <div className="col"><img className="img-thumbnail" src="https://images.pexels.com/photos/3041347/pexels-photo-3041347.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt=""/> </div>
+            <div className="col"><img className="img-thumbnail" src="https://source.unsplash.com/random" alt=""/></div>
+            <div className="col"><img className="img-thumbnail" src="https://source.unsplash.com/random" alt=""/></div>
+            <div className="col"><img className="img-thumbnail" src="https://source.unsplash.com/random" alt=""/> </div>
           </div>
           <div className="row pt-5">
             <div className="col"><img className="img-thumbnail" src="https://images.pexels.com/photos/1837168/pexels-photo-1837168.jpeg" alt=""/></div>
